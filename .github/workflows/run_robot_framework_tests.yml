@@ -36,7 +36,7 @@ jobs:
                -v ${PWD}/tests:/robot:Z \
               -v ${PWD}/reports:/results:Z \
             	carinha13/robotframework  \
-            	--outputdir /results /robot/
+            	--outputdir /results /robot/test_dinosaur_test.robot
              docker logs
         # upload test reports as a zip file
         - name: Upload reports
