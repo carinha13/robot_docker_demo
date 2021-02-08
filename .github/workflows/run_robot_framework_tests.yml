@@ -33,11 +33,10 @@ jobs:
           # configure -e ROBOT_OPTIONS according to yout tests, or remove it if no special configuration is needed
           run: |
             docker run \
-               -v ${PWD}/tests:/robot:Z \
-              -v ${PWD}/reports:/results:Z \
-            	carinha13/robotframework  \
-            	--outputdir /results /robot/test_dinosaur_test.robot
-             docker logs
+             -v ${PWD}/tests:/robot:Z \
+             -v ${PWD}/reports:/results:Z \
+             --outputdir /results /robot/test_dinosaur_test.robot \
+             carinha13/robotframework
         # upload test reports as a zip file
         - name: Upload reports
           uses: actions/upload-artifact@v1
