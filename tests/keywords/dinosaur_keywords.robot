@@ -8,7 +8,7 @@ Library             String
 
 Read Dinosaurs
     [Documentation]     Reads dinosaur.csv to a suite level variable
-    ${file}     Get File        /data/dinosaur.csv
+    ${file}     Get File        ../data/dinosaur.csv
     @{list}     Split To Lines  ${file}
     Set Suite Variable          @{DINOSAUR_LIST}    @{list}
 
