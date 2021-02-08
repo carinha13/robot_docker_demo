@@ -35,7 +35,7 @@ jobs:
             docker run \
               -v ${PWD}/tests:/robot \
               -v ${PWD}/reports:/results \
-            	vfmz/robotframework  \
+            	carinha13/robotframework  \
             	--outputdir /results /robot/test_dinosaur_test.robot
         # upload test reports as a zip file
         - name: Upload reports
