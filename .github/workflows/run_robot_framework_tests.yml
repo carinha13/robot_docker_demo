@@ -35,9 +35,9 @@ jobs:
             docker run \
              -v ${PWD}/tests:/robot:Z \
              -v ${PWD}/reports:/results:Z \
-             --outputdir /results /robot/test_dinosaur_test.robot \
-             carinha13/robotframework
-        # upload test reports as a zip file
+              carinha13/robotframework \
+             --outputdir /results /robot/test_dinosaur_test.robot
+         # upload test reports as a zip file
         - name: Upload reports
           uses: actions/upload-artifact@v1
           if: always()
